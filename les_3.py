@@ -38,10 +38,8 @@ def writeFile(hero):
 def readFile(hero):
     with open(str(hero['name']) + '.txt', 'r', encoding='utf-8') as file:
         for line in file:
-            line = line.strip('\n')
-            print(line)
+            line = line.strip('\n')            
             k = line.split(':')[0]
-            print(k)
             if k in hero.keys():
                 try:
                     hero[k] = float(line.split(':')[1])
